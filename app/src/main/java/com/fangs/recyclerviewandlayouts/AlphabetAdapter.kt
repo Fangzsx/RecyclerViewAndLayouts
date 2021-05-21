@@ -11,7 +11,8 @@ class AlphabetAdapter(private val context: Context, private val alphabetsLength:
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        LayoutInflater.from(context).inflate(R.layout.alphabet_card, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.alphabet_card, parent, false)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
