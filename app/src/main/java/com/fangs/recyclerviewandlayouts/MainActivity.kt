@@ -29,6 +29,14 @@ class MainActivity : AppCompatActivity() {
 
         //endregion
 
+        //roman numerals
+        //region
+        val rvRomanNumerals = findViewById<RecyclerView>(R.id.rv_roman_numerals)
+        rvRomanNumerals.layoutManager = GridLayoutManager(this, 5)
+        rvRomanNumerals.setHasFixedSize(true)
+        rvRomanNumerals.adapter = RomanNumeralsAdapter(this, 10)
+
+        //endregion
 
 
 
