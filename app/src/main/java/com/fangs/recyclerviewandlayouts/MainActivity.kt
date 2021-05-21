@@ -2,6 +2,7 @@ package com.fangs.recyclerviewandlayouts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -10,7 +11,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rvNumbers = findViewById<RecyclerView>(R.id.rv_countingNumbers)
-
+        //scaffold
+        rvNumbers.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rvNumbers.adapter = NumbersAdapter(this,10)
 
 
 
