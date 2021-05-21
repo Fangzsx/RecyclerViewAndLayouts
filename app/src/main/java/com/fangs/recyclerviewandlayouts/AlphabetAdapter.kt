@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class AlphabetAdapter(private val context: Context, private val alphabetsLength: Int) :
@@ -16,6 +17,8 @@ class AlphabetAdapter(private val context: Context, private val alphabetsLength:
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val letter = holder.itemView.findViewById<TextView>(R.id.tv_letter)
+        letter.text = ((position + 65).toChar()).toString()
 
     }
 
