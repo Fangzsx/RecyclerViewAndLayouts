@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class RomanNumeralsAdapter(private val context: Context, private val number: Int) :
@@ -26,10 +27,14 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
         hashMap["10"] = "X"
 
         val view = LayoutInflater.from(context).inflate(R.layout.roman_numeral, parent,false)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val textRoman = holder.itemView.findViewById<TextView>(R.id.tv_roman_number)
+        if(hashMap.containsKey((position+1).toString())){
+            textRoman.text = hashMap[(position+1).toString()]
+        }
     }
 
     override fun getItemCount(): Int = number
