@@ -28,9 +28,6 @@ class AlphabetAdapter(private val context: Context, private val alphabetsLength:
         layoutParams.height = cardSideLength
         layoutParams.setMargins(CARD_MARGIN,0,CARD_MARGIN,0)
 
-
-
-
         return ViewHolder(view)
     }
 

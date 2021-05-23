@@ -4,10 +4,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:layout_margin="5dp">
+    android:gravity="center">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_numbers"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:cardCornerRadius="8dp"

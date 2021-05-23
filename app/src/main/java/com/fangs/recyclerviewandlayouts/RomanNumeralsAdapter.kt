@@ -20,9 +20,6 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
 
     }
 
-
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         hashMap["1"] = "I"
         hashMap["2"] = "II"
