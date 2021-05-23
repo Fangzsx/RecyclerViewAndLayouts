@@ -39,12 +39,12 @@
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"/>
+        android:layout_weight="1"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_roman_numerals"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="2"/>
 
 </LinearLayout>

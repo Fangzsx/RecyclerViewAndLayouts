@@ -12,6 +12,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:cardBackgroundColor="#FF5722"
+
         app:cardCornerRadius="8dp"
         android:padding="10dp">
 
@@ -22,7 +23,6 @@
             android:text="I"
             android:textColor="@color/white"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold"/>
 
 
