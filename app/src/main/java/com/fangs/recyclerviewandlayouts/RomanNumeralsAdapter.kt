@@ -5,12 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.math.min
 
 class RomanNumeralsAdapter(private val context: Context, private val number: Int) :
     RecyclerView.Adapter<RomanNumeralsAdapter.ViewHolder>() {
 
-    private val hashMap : HashMap<String, String> = HashMap<String, String>()
+    companion object {
+        private val hashMap : HashMap<String, String> = HashMap<String, String>()
+        private const val CARD_MARGIN = 5
+
+    }
+
 
 
 
@@ -26,7 +33,17 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
         hashMap["9"] = "IX"
         hashMap["10"] = "X"
 
+        val cardWidth = parent.width / 5 - (2 * CARD_MARGIN) //no of cards horizontally = 5
+        val cardHeight = parent.height / 2 - (2 * CARD_MARGIN)//no of cards vertically = 2
+        val cardSideLength = min(cardWidth, cardHeight)
+
         val view = LayoutInflater.from(context).inflate(R.layout.roman_numeral, parent,false)
+        val layoutParams = view.findViewById<CardView>(R.id.cv_roman_numerals).layoutParams as ViewGroup.MarginLayoutParams
+        layoutParams.width = cardSideLength
+        layoutParams.height = cardSideLength
+        layoutParams.setMargins(CARD_MARGIN, CARD_MARGIN, CARD_MARGIN, CARD_MARGIN)
+
+
         return ViewHolder(view)
     }
 
