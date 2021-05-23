@@ -16,7 +16,7 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
 
     companion object {
         private val hashMap : HashMap<String, String> = HashMap<String, String>()
-        private const val CARD_MARGIN = 10
+        private const val CARD_MARGIN = 20
 
     }
 
