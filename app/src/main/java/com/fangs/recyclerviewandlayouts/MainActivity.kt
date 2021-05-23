@@ -1,6 +1,8 @@
 package com.fangs.recyclerviewandlayouts
 
 import android.os.Bundle
+import android.os.Debug
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         //numbers
         //region
         val rvNumbers = findViewById<RecyclerView>(R.id.rv_countingNumbers)

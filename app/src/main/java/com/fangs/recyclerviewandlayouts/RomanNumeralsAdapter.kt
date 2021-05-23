@@ -1,6 +1,7 @@
 package com.fangs.recyclerviewandlayouts
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
 
     companion object {
         private val hashMap : HashMap<String, String> = HashMap<String, String>()
-        private const val CARD_MARGIN = 1
+        private const val CARD_MARGIN = 10
 
     }
 
