@@ -26,7 +26,7 @@ class AlphabetAdapter(private val context: Context, private val alphabetsLength:
         val layoutParams = view.findViewById<CardView>(R.id.cv_alphabet).layoutParams as ViewGroup.MarginLayoutParams
         layoutParams.width = cardSideLength
         layoutParams.height = cardSideLength
-        layoutParams.setMargins(CARD_MARGIN,0,CARD_MARGIN,0)
+        layoutParams.setMargins(CARD_MARGIN, CARD_MARGIN,CARD_MARGIN, CARD_MARGIN)
 
         return ViewHolder(view)
     }
