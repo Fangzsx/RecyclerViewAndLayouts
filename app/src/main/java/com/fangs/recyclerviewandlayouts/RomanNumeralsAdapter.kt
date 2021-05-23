@@ -1,6 +1,7 @@
 package com.fangs.recyclerviewandlayouts
 
 import android.content.Context
+import android.os.Debug
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,7 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
         hashMap["9"] = "IX"
         hashMap["10"] = "X"
 
+        Log.d("parent height", "${parent.height}")
         val cardWidth = parent.width / 5 - (2 * CARD_MARGIN) //no of cards horizontally = 5
         val cardHeight = parent.height / 2 - (2 * CARD_MARGIN)//no of cards vertically = 2
         val cardSideLength = min(cardWidth, cardHeight)
