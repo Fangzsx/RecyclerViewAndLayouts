@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val rvAlphabet = findViewById<RecyclerView>(R.id.rv_alphabets)
         rvAlphabet.layoutManager = GridLayoutManager(this, 5)
         rvAlphabet.setHasFixedSize(true)
-        rvAlphabet.adapter = AlphabetAdapter(this, BoardSize.TWENTY)
+        rvAlphabet.adapter = AlphabetAdapter(this, BoardSize.TEN)
 
 
         //endregion
