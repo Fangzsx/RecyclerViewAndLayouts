@@ -32,7 +32,6 @@ class RomanNumeralsAdapter(private val context: Context, private val boardSize: 
         hashMap["9"] = "IX"
         hashMap["10"] = "X"
 
-        Log.d("parent height", "${parent.height}")
         val cardWidth = parent.width / boardSize.getWidth() - (2 * CARD_MARGIN) //no of cards horizontally = 5
         val cardHeight = parent.height / boardSize.getHeight() - (2 * CARD_MARGIN)//no of cards vertically = 2
         val cardSideLength = min(cardWidth, cardHeight)
