@@ -33,16 +33,19 @@
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         android:layout_weight="1"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_alphabets"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         android:layout_weight="1.75"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_roman_numerals"
         android:padding="10dp"
+        android:overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
