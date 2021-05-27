@@ -15,7 +15,7 @@ class RomanNumeralsAdapter(private val context: Context, private val boardSize: 
     RecyclerView.Adapter<RomanNumeralsAdapter.ViewHolder>() {
 
     companion object {
-        private val hashMap : HashMap<String, String> = HashMap<String, String>()
+        private val hashMap : HashMap<String, String> = HashMap()
         private const val CARD_MARGIN = 10
 
     }
