@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.fangs.recyclerviewandlayouts.models.BoardSize
 import kotlin.math.min
 
-class NumbersAdapter(private val context: Context, private val numbers : Int) :
+class NumbersAdapter(private val context: Context, private val boardSize: BoardSize) :
     RecyclerView.Adapter<NumbersAdapter.ViewHolder>() {
 
     companion object {
@@ -19,8 +20,8 @@ class NumbersAdapter(private val context: Context, private val numbers : Int) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val cardHeight = parent.height / 2 - (2 * CARD_MARGIN)
-        val cardWidth = parent.width / 5 - (2 * CARD_MARGIN)
+        val cardHeight = parent.height / boardSize.getWidth() - (2 * CARD_MARGIN)
+        val cardWidth = parent.width / boardSize.getHeight() - (2 * CARD_MARGIN)
         val cardSideLength = min(cardHeight, cardWidth)
 
         val view = LayoutInflater.from(context).inflate(R.layout.number_card, parent, false)
@@ -39,7 +40,7 @@ class NumbersAdapter(private val context: Context, private val numbers : Int) :
 
     }
 
-    override fun getItemCount(): Int = numbers
+    override fun getItemCount(): Int = boardSize.cardsNum
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 

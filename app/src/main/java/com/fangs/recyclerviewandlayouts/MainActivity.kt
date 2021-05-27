@@ -1,11 +1,10 @@
 package com.fangs.recyclerviewandlayouts
 
 import android.os.Bundle
-import android.os.Debug
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.fangs.recyclerviewandlayouts.models.BoardSize
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         //scaffold
         rvNumbers.layoutManager = GridLayoutManager(this, 5)
         rvNumbers.setHasFixedSize(true)
-        rvNumbers.adapter = NumbersAdapter(this,10)
+        rvNumbers.adapter = NumbersAdapter(this,BoardSize.TEN)
         //endregion
 
         //alphabets
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val rvAlphabet = findViewById<RecyclerView>(R.id.rv_alphabets)
         rvAlphabet.layoutManager = GridLayoutManager(this, 5)
         rvAlphabet.setHasFixedSize(true)
-        rvAlphabet.adapter = AlphabetAdapter(this, 20)
+        rvAlphabet.adapter = AlphabetAdapter(this, BoardSize.TWENTY)
 
 
         //endregion

@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.fangs.recyclerviewandlayouts.models.BoardSize
 import kotlin.math.min
 
-class AlphabetAdapter(private val context: Context, private val alphabetsLength: Int) :
+class AlphabetAdapter(private val context: Context, private val boardSize: BoardSize) :
     RecyclerView.Adapter<AlphabetAdapter.ViewHolder>() {
 
     companion object {
@@ -37,7 +38,7 @@ class AlphabetAdapter(private val context: Context, private val alphabetsLength:
 
     }
 
-    override fun getItemCount(): Int = alphabetsLength
+    override fun getItemCount(): Int = boardSize.cardsNum
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
