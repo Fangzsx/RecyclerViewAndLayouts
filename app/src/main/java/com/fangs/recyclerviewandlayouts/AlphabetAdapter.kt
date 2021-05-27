@@ -13,14 +13,14 @@ class AlphabetAdapter(private val context: Context, private val boardSize: Board
     RecyclerView.Adapter<AlphabetAdapter.ViewHolder>() {
 
     companion object {
-        private const val CARD_MARGIN = 20
+        private const val CARD_MARGIN = 10
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val cardWidth = parent.width / 5 - (2 * CARD_MARGIN)
-        val cardHeight = parent.height / 4 - (2 * CARD_MARGIN)
+        val cardWidth = parent.width / boardSize.getWidth() - (2 * CARD_MARGIN)
+        val cardHeight = parent.height / boardSize.getHeight() - (2 * CARD_MARGIN)
         val cardSideLength = min(cardWidth, cardHeight)
 
         val view = LayoutInflater.from(context).inflate(R.layout.alphabet_card, parent, false)
