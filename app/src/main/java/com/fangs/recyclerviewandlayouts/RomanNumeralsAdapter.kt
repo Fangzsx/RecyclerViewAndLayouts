@@ -1,7 +1,6 @@
 package com.fangs.recyclerviewandlayouts
 
 import android.content.Context
-import android.os.Debug
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +8,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.fangs.recyclerviewandlayouts.models.BoardSize
 import kotlin.math.min
 
-class RomanNumeralsAdapter(private val context: Context, private val number: Int) :
+class RomanNumeralsAdapter(private val context: Context, private val boardSize: BoardSize) :
     RecyclerView.Adapter<RomanNumeralsAdapter.ViewHolder>() {
 
     companion object {
         private val hashMap : HashMap<String, String> = HashMap<String, String>()
-        private const val CARD_MARGIN = 20
+        private const val CARD_MARGIN = 10
 
     }
 
@@ -33,8 +33,8 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
         hashMap["10"] = "X"
 
         Log.d("parent height", "${parent.height}")
-        val cardWidth = parent.width / 5 - (2 * CARD_MARGIN) //no of cards horizontally = 5
-        val cardHeight = parent.height / 2 - (2 * CARD_MARGIN)//no of cards vertically = 2
+        val cardWidth = parent.width / boardSize.getWidth() - (2 * CARD_MARGIN) //no of cards horizontally = 5
+        val cardHeight = parent.height / boardSize.getHeight() - (2 * CARD_MARGIN)//no of cards vertically = 2
         val cardSideLength = min(cardWidth, cardHeight)
 
         val view = LayoutInflater.from(context).inflate(R.layout.roman_numeral, parent,false)
@@ -54,7 +54,7 @@ class RomanNumeralsAdapter(private val context: Context, private val number: Int
         }
     }
 
-    override fun getItemCount(): Int = number
+    override fun getItemCount(): Int = boardSize.cardsNum
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 

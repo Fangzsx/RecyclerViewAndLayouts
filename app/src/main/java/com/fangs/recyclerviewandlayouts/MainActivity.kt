@@ -15,16 +15,16 @@ class MainActivity : AppCompatActivity() {
         val rvNumbers = findViewById<RecyclerView>(R.id.rv_countingNumbers)
         //scaffold
         rvNumbers.layoutManager = GridLayoutManager(this, 5)
-        rvNumbers.setHasFixedSize(true)
         rvNumbers.adapter = NumbersAdapter(this,BoardSize.TEN)
+        rvNumbers.setHasFixedSize(true)
         //endregion
 
         //alphabets
         //region
         val rvAlphabet = findViewById<RecyclerView>(R.id.rv_alphabets)
         rvAlphabet.layoutManager = GridLayoutManager(this, 5)
+        rvAlphabet.adapter = AlphabetAdapter(this, BoardSize.TWENTY)
         rvAlphabet.setHasFixedSize(true)
-        rvAlphabet.adapter = AlphabetAdapter(this, BoardSize.TEN)
 
 
         //endregion
@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         //region
         val rvRomanNumerals = findViewById<RecyclerView>(R.id.rv_roman_numerals)
         rvRomanNumerals.layoutManager = GridLayoutManager(this, 5)
+        rvRomanNumerals.adapter = RomanNumeralsAdapter(this, BoardSize.TEN)
         rvRomanNumerals.setHasFixedSize(true)
-        rvRomanNumerals.adapter = RomanNumeralsAdapter(this, 10)
 
         //endregion
 
